@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Navigation Bar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+            position: relative;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+
+        .navbar h2 {
+            margin: 0 0 20px;
+        }
+
+        .navbar a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #d0e8ff;
+        }
+
+        .more {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .more:hover {
+            background-color: #4585a0;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 4rem;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .info-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-box img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .info-box p {
+            margin: 0;
+        }
+
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-color: #007bff;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .chatbot-button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .chatbot-button span {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+
+        .chatbot-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'block';
+            } else {
+                navbar.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <button class="more" onclick="toggleNavbar()">Get to Know Me</button>
+    <div class="content">
+        <h1>Welcome!</h1>
+        <div class="info-box">
+            <img src="https://insertface.com/fb/910/business-formal-attire-woman-910174-d4g5p-fb.jpg">
+            <p>My name is Shruti Tiwari, and I am currently pursuing my Second Year BSc in Information Technology at St. Xavier's College. Passionate about coding and technology, I am actively seeking internships and freelancing opportunities to apply my skills and grow professionally.</p>
+        </div>
+    </div>
+    
+    
+    <a href="chat.html">
+        <button class="chatbot-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712029.png" alt="Chatbot">
+            <span>Need Help??</span>
+        </button>
+    </a>
+
+    <div id="navbar" class="navbar">
+        <a href="education.html">EDUCATION</a>
+        <a href="contact.html">CONTACT INFO</a>
+        <a href="hobbies.html">HOBBIES</a>
+        <a href="skill.html">SKILLS</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="http://localhost/xmlshruti/feedback.html">FEEDBACK</a>
+    </div>
+
+</body>
+
+</html>

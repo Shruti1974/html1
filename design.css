@@ -1,0 +1,46 @@
+.navbar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    position: fixed; /* Keep it fixed so it remains on screen when scrolling */
+    right: 0;
+    top: 0;
+    height: 100%; /* Cover the entire height of the page */
+    z-index: 1000; /* High z-index to ensure it stays above other content */
+    overflow-y: auto; /* In case content exceeds the viewport height, allow scrolling */
+}
+
+.navbar a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #d0e8ff;
+}
+
+.more {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    z-index: 1100; /* Ensure the button stays above the navbar */
+}
+
+.more:hover {
+    background-color: #4585a0;
+}

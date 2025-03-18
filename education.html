@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #cccccc, #ffffff); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            color: black; 
+        }
+        h1 {
+            margin: 20px 0;
+            color: black; 
+            padding: 10px;
+            font-size: 2.5rem; 
+            text-transform: uppercase; 
+        }
+        .icon {
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            overflow-x: auto; 
+            padding: 20px 0;
+        }
+        .card {
+            width: 350px; 
+            height: 400px; 
+            border-radius: 10px;
+            perspective: 1000px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px; 
+            background: rgba(0, 0, 0, 0.7); 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+        }
+        .card-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif; 
+            font-size: 2rem;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center; 
+        }
+        .card-front {
+            background-color: rgba(106, 116, 209, 0.9); 
+        }
+        .card-back {
+            background-color: rgba(75, 192, 200, 0.9);
+            transform: rotateY(180deg);
+            font-size: 1.5rem; 
+            color: #333;
+            padding: 15px; 
+            text-align: left;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            box-sizing: border-box; 
+        }
+        .card-back p {
+            margin-top: 10px;
+            margin-bottom: 10px; 
+        }
+        .card-front h2 {
+            margin: 0;
+            font-size: 2.5rem; 
+        }
+        .card-back {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+        }
+
+        .home-button {
+            position: fixed; 
+            top: 20px; 
+            left: 20px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none;
+            border-radius: 5px; 
+            padding: 10px 15px; 
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #0056b3; 
+        }
+        
+    </style>
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'block';
+            } else {
+                navbar.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button class="more" onclick="toggleNavbar()">MORE</button>
+<div id="navbar" class="navbar">
+    <a href="education.html">EDUCATION</a>
+    <a href="contact.html">CONTACT INFO</a>
+    <a href="hobbies.html">HOBBIES</a>
+    <a href="skill.html">SKILLS</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="http://localhost/xmlshruti/feedback.html">CONTACT ME</a>
+</div>
+    <a href="FRONTPAGE.html">
+        <button class="home-button">
+            <i class="fas fa-home"></i>
+        </button>
+    </a>
+    <h1><i class="fas fa-book icon"></i>EDUCATION</h1>
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h2>Primary Education</h2>
+                </div>
+                <div class="card-back">
+                    <p>I to IV:</p>
+                    <p><i>Navy Children School, Colaba, Mumbai</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h2>Secondary Education</h2>
+                </div>
+                <div class="card-back">
+                    <p>V to VI:</p>
+                    <p><i>Kendriya Vidyalaya no 2, Colaba, Mumbai</i></p>
+                    <p>VII to IX:</p>
+                    <p><i>Kendriya Vidyalaya no 1, Vishakhapatnam, Andhra Pradesh</i></p>
+                    <p>X to XII:</p>
+                    <p><i>Kendriya Vidyalaya no 1, Vasco da Gama, Goa</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h2>Graduation</h2>
+                </div>
+                <div class="card-back">
+                    <p><i>Bachelor in Information Technology:</i></p>
+                    <p><i>St. Xavier's, Colaba, Mumbai</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
